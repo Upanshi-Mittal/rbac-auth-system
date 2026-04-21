@@ -16,8 +16,11 @@
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "joi": "^17.13.3",
-    "jsonwebtoken": "^9.0.2",
+    "jsonwebtoken": "^9.0.3",
     "mongoose": "^8.16.0",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "react-router-dom": "^7.14.2",
+    "react-toastify": "^11.1.0",
+    "toastify": "^2.0.1"
   }
 }

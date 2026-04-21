@@ -1,6 +1,6 @@
 require('dotenv').config();
 const jwt=require('jsonwebtoken');
-const auth=async(req,res,next)=>{
+const protect=async(req,res,next)=>{
     const auth=req.headers['authorization'];
     console.log(auth);
     if(!auth){
@@ -15,4 +15,12 @@ const auth=async(req,res,next)=>{
     }
 
 }
-module.exports=auth
+const allowRoles = (...roles) => {
+  return (req, res, next) => {
+    if (!roles.includes(req.user.role)) {
+      return res.status(403).json({ message: "access denied" });
+    }
+    next();
+  };
+};
+module.exports = { protect, allowRoles };

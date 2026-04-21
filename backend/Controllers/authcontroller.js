@@ -16,12 +16,17 @@ const signup = async (req, res) => {
         userm.password = await bcrypt.hash(password, 10);
         role: userm.role = role || "user";
         await userm.save();
-        res.status(201).json(
-            {
-                message: "Signup successfully",
-                success: true
-            }
-        )
+        const token = jwt.sign(
+  { id: userm._id, role: userm.role },
+  process.env.JWT_SECRET,
+  { expiresIn: "1d" }
+);
+
+res.status(201).json({
+  message: "Signup successfully",
+  success: true,
+  token
+});
     }
     catch (error) {
         res.status(500).json({
@@ -46,7 +51,7 @@ const login = async (req, res) => {
         }
 
         const jwtToken = jwt.sign(
-            { email: user.email, _id: user._id },
+            { email: user.email, _id: user._id, role: user.role },
             process.env.JWT_SECRET,
             { expiresIn: '24h' }
         )
@@ -56,7 +61,6 @@ const login = async (req, res) => {
                 success: true,
                 jwtToken,
                 email,
-                password,
                 name:user.name
                 
             }
