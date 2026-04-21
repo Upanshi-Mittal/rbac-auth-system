@@ -21,11 +21,21 @@ const userschema=new mongoose.Schema({
     }
 })
 
-const blogSchema=new mongoose.Schema({
+const productSchema=new mongoose.Schema({
     date:Date,
-    title:String,
-    content:String  
+    product_id:{type:Number,
+        required:true,
+        unique:true
+    },
+    product_name: {
+        type: String,
+        required:true,
+    },
+    desc: {
+        type: String,
+        required : false
+    },
 })
 const usermodel=mongoose.model('user',userschema)
-const blogmodel=mongoose.model('blog',blogSchema)
-module.exports={usermodel,blogmodel};
+const productmodel=mongoose.model('product',productSchema)
+module.exports={usermodel,productmodel};

@@ -19,7 +19,7 @@ function Login() {
     console.log('Updated loginfo:', loginfo);
   }, [loginfo]);
 
-  const sub =async (e) => {
+  const submission =async (e) => {
     e.preventDefault();
     const { email, password } = loginfo;
     if (!email || !password) {
@@ -34,7 +34,7 @@ function Login() {
       });
 
       const result=await response.json();
-      const {success,message,jwtToken,name}=result;
+      const {success,message,jwtToken,name,role}=result;
       if(!success){
         return handleerror(message);
       }
@@ -42,6 +42,7 @@ function Login() {
         handlesuccess('you have logged in successfully');
         localStorage.setItem('token',jwtToken);
         localStorage.setItem('name',name);
+        localStorage.setItem("role", role);
         setTimeout(() => {
           navigate('/final');
         },1000);
@@ -56,7 +57,7 @@ function Login() {
 
   return (
     <div className="container">
-      <form className="form" onSubmit={sub}>
+      <form className="form" onSubmit={submission}>
         <h2 className="page">Login</h2>
         <div className="details">
           <label htmlFor="email">Email</label>
@@ -78,7 +79,7 @@ function Login() {
             name="password"
           />
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" className="submitButton">Login</button>
         <span>Don't have an account?
           <Link to="/signup">Sign up</Link>
         </span>

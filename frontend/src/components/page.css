@@ -14,12 +14,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;   
     height: 60vh;
     border:solid 3px rgb(39, 156, 224);
     border-radius: 10px;;
     margin:90px;
     width:400px;
+padding: 20px; 
     perspective: 50% 50%;
     box-shadow: 10px 3px 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 
@@ -29,8 +30,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin: 15px;
     font-size: large;
+    width: 100%;
+  margin-bottom: 15px;   
 }
 
 #email, #name, #password {
@@ -40,25 +42,56 @@
     font-size:medium;
     padding: 5px 10px;
     flex-direction: column;
-    width: 300px;
+    width:100%;
+    box-sizing: border-box;
 }
 
 
 label{
-
     margin-bottom :10px;
 }
 
-button{
-    
-    margin-top:10px;
-    padding: 5px 10px;
-    cursor: pointer;
-    background-color: rgb(30, 158, 232);
-    width:200px;
-    border-radius: 10px;;
+.submitButton {
+  margin-top: 20px;
+  width: 100%;              
+  padding: 12px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1e9ee8, #3b82f6);
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #3b82f6, #1e9ee8);
 }
 
 .login, .sigup{
     margin:20px;
+}
+
+
+.role-container {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  flex-direction: row;
+}
+
+.roleButton {
+  flex: 1;
+  padding: 12px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.roleButton.active {
+  background: linear-gradient(135deg, #1e9ee8, #3b82f6);
+  color: white;
 }
