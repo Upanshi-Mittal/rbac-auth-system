@@ -1,12 +1,11 @@
 import './App.css';
 import {Route,Routes,useNavigate} from "react-router-dom";
-import Login from './pages/login';
-import Signup from './pages/signup';
-import Home from './pages/home';
-import Final from './pages/final';
-import RefereshHandler from './pages/refereshhandler';
+import Login from './components/login';
+import Signup from './components/signup';
+import Home from './components/home';
+import Final from './components/final';
+import RefreshHandler from './components/refreshhandler';
 import { useState } from 'react';
-
 function App() {
   const Navigate=useNavigate();
   const [isAutthenticated, setIsAutthenticated] = useState(false);
@@ -18,7 +17,7 @@ function App() {
       <h1>
         Auth app
       </h1>
-      <RefereshHandler setIsAuthenticated={setIsAutthenticated} />
+      <RefreshHandler setIsAuthenticated={setIsAutthenticated} />
       <Routes>
         
         <Route path="/login" element={<Login />} />
