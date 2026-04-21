@@ -22,19 +22,18 @@ const userschema=new mongoose.Schema({
 })
 
 const productSchema=new mongoose.Schema({
-    date:Date,
-    product_id:{type:Number,
-        required:true,
-        unique:true
-    },
-    product_name: {
+    name: {
         type: String,
         required:true,
     },
-    desc: {
+    description: {
         type: String,
         required : false
     },
+    price:{
+        type: Number,
+        required : true
+    } 
 })
 const usermodel=mongoose.model('user',userschema)
 const productmodel=mongoose.model('product',productSchema)

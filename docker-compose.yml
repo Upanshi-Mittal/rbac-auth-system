@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./backend
+    container_name: my_backend
+    ports:
+      - "8080:8080"
+    environment:
+      - MONGO_CONN=${MONGO_CONN}
+      - JWT_SECRET=${JWT_SECRET}
+
+  frontend:
+    build: ./frontend
+    container_name: my_frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend

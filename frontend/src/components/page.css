@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height:100vh;
 }
 .form{
     
@@ -32,7 +33,7 @@ padding: 20px;
     align-items: flex-start;
     font-size: large;
     width: 100%;
-  margin-bottom: 15px;   
+    margin-bottom: 15px;   
 }
 
 #email, #name, #password {
@@ -52,20 +53,20 @@ label{
 }
 
 .submitButton {
-  margin-top: 20px;
-  width: 100%;              
-  padding: 12px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #1e9ee8, #3b82f6);
-  border: none;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
+    margin-top: 20px;
+    width: 100%;              
+    padding: 12px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #1e9ee8, #3b82f6);
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .submitButton:hover {
-  transform: scale(1.05);
-  background: linear-gradient(135deg, #3b82f6, #1e9ee8);
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #3b82f6, #1e9ee8);
 }
 
 .login, .sigup{
@@ -74,24 +75,145 @@ label{
 
 
 .role-container {
-  display: flex;
-  gap: 12px;
-  width: 100%;
-  flex-direction: row;
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    flex-direction: row;
 }
 
 .roleButton {
-  flex: 1;
-  padding: 12px;
-  background-color: white;
-  color: black;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.2s;
+    flex: 1;
+    padding: 12px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 .roleButton.active {
-  background: linear-gradient(135deg, #1e9ee8, #3b82f6);
-  color: white;
+    background: linear-gradient(135deg, #1e9ee8, #3b82f6);
+    color: white;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    background-color: black;
+    margin: 30px 40px ;
+    border: 1px solid #1e9ee8;
+    border-radius: 20px;
+    padding:10px;
+    align-items: center;
+}
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #111, #1a1a1a);
+    border: 1px solid #1e9ee8;
+    border-radius: 18px;
+    gap: 20px;
+    padding: 20px 25px;
+    margin: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(30, 158, 232, 0.2);
+}
+
+.product h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.product p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.product button {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, #ff4d4d, #ff1a1a);
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.product button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ff1a1a, #ff4d4d);
+}
+
+.header button {
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.inputDetails {
+    display: flex;
+    gap: 12px;
+    width: 95%;
+    margin: 20px auto;  
+}
+
+.inputDetails input {
+    flex: 1;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.inputDetails button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #1e9ee8, #3b82f6);
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    min-width: 80px;   
+}
+
+
+.container h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.signup,
+.login {
+    width: 180px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.signup {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+}
+
+.login {
+    background: linear-gradient(135deg, #1e9ee8, #3b82f6);
+    color: white;
+}
+
+.signup:hover,
+.login:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 }
