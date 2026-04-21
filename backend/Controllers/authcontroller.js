@@ -7,14 +7,14 @@ require("dotenv").config();
 const signup = async (req, res) => {
 
     try {
-        const { name, email, password } = req.body;
+        const { name, email, password , role} = req.body;
         const user = await usermodel.findOne({ email });
         if (user) {
             return res.status(409).json({ message: "User is already exist", success: false })
         }
-        const userm = new usermodel({ name, email, password });
+        const userm = new usermodel({ name, email, password , role});
         userm.password = await bcrypt.hash(password, 10);
-
+        role: userm.role = role || "user";
         await userm.save();
         res.status(201).json(
             {
