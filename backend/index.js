@@ -11,11 +11,11 @@ app.get('/pin',(req,res)=>{
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({ 
-    origin: "http://localhost:5173",
+    origin: "https://rbac-auth-system-74cu.onrender.com",
     credentials: true
 }));
 app.use('/auth',require("./router/authroute"));
 app.use('/products',require("./router/productRouter"));
 app.listen(Port,()=>{
-    console.log(`port is running on ${PORT}`);
+    console.log(`port is running on ${Port}`);
 })
