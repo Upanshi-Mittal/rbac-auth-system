@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { handlesuccess } from '../utils';
 import { ToastContainer } from 'react-toastify';
+const API = import.meta.env.URL;
 function AddProduct({ refresh }) {
     const [product, setProduct] = useState({
         name: "",
@@ -14,7 +15,7 @@ function AddProduct({ refresh }) {
             alert("Name and Price required");
             return;
         }
-        const response = await fetch("https://rbac-auth-system-74cu.onrender.com/products", {
+        const response = await fetch(`${API}/products`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -69,7 +70,7 @@ function Final() {
 
     const deleteProduct = async (id) => {
         try {
-            const response = await fetch(`https://rbac-auth-system-74cu.onrender.com/products/${id}`, {
+            const response = await fetch(`${API}/products/${id}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`

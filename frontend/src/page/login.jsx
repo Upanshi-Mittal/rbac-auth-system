@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { handleerror, handlesuccess } from '../utils';
 import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+const API = import.meta.env.URL;
 
 function Login() {
   const navigate=useNavigate();
@@ -25,7 +26,7 @@ function Login() {
     if (!email || !password) {
       return handleerror('All fields are required');
     }
-    const url="https://rbac-auth-system-74cu.onrender.com/auth/login";
+    const url=`${API}/auth/login`;
     try{
       const response=await fetch(url,{
         method:'POST',

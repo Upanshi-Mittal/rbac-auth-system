@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import "./page.css";
 import { handleerror, handlesuccess } from "../utils";
 import { useNavigate } from "react-router-dom";
+const API = import.meta.env.URL;
 function Signup() {
     const navigate = useNavigate();
     const [signinfo, setsigninfo] = useState({
@@ -26,7 +27,7 @@ function Signup() {
         if (!name || !email || !password) {
             return handleerror("All fields are required");
         }
-        const url = "https://rbac-auth-system-74cu.onrender.com/auth/signup";
+        const url = `${API}/auth/signup`;
         try {
             const response = await fetch(url, {
                 method: "POST",
