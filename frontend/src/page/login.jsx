@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { handleerror, handlesuccess } from '../utils';
 import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-const API = import.meta.env.URL;
+const API = "https://rbac-auth-system-74cu.onrender.com";
 
 function Login() {
   const navigate=useNavigate();

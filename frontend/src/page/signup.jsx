@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./page.css";
 import { handleerror, handlesuccess } from "../utils";
 import { useNavigate } from "react-router-dom";
-const API = import.meta.env.URL;
+const API = "https://rbac-auth-system-74cu.onrender.com";
 function Signup() {
     const navigate = useNavigate();
     const [signinfo, setsigninfo] = useState({

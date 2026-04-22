@@ -1,10 +1,10 @@
 import './App.css';
 import {Route,Routes,useNavigate} from "react-router-dom";
-import Login from './components/login';
-import Signup from './components/signup';
-import Home from './components/home';
-import Final from './components/final';
-import RefreshHandler from './components/refreshhandler';
+import Login from './page/login';
+import Signup from './page/signup';
+import Home from './page/home';
+import Final from './page/final';
+import RefreshHandler from './page/refreshhandler';
 import { useState } from 'react';
 function App() {
   const Navigate=useNavigate();

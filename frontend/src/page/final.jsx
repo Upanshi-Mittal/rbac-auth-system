@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { handlesuccess } from '../utils';
 import { ToastContainer } from 'react-toastify';
-const API = import.meta.env.URL;
+const API = "https://rbac-auth-system-74cu.onrender.com";
 function AddProduct({ refresh }) {
     const [product, setProduct] = useState({
         name: "",
