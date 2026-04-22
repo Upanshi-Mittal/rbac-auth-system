@@ -26,7 +26,7 @@ function Signup() {
         if (!name || !email || !password) {
             return handleerror("All fields are required");
         }
-        const url = "http://localhost:8080/auth/signup";
+        const url = "https://rbac-auth-system-74cu.onrender.com/auth/signup";
         try {
             const response = await fetch(url, {
                 method: "POST",

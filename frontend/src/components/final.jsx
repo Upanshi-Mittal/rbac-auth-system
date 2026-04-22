@@ -14,7 +14,7 @@ function AddProduct({ refresh }) {
             alert("Name and Price required");
             return;
         }
-        const response = await fetch("http://localhost:8080/products", {
+        const response = await fetch("https://rbac-auth-system-74cu.onrender.com/products", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -69,7 +69,7 @@ function Final() {
 
     const deleteProduct = async (id) => {
         try {
-            const response = await fetch(`http://localhost:8080/products/${id}`, {
+            const response = await fetch(`https://rbac-auth-system-74cu.onrender.com/products/${id}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -89,7 +89,7 @@ function Final() {
             const headers = {
                 Authorization: `Bearer ${localStorage.getItem('token')}`
             }
-            const response = await fetch('http://localhost:8080/products', { headers });
+            const response = await fetch('https://rbac-auth-system-74cu.onrender.com/products', { headers });
             const data = await response.json();
             console.log(data);
             setProducts(data);
