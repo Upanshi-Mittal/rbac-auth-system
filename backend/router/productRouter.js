@@ -4,7 +4,6 @@ const router = express.Router();
 
 const { protect, allowRoles } = require("../Middlewares/auth");
 const { createProduct, getProducts, deleteProduct } = require("../Controllers/productController");
-console.log("Auth routes loaded");
 router.get(
   "/",
   protect,

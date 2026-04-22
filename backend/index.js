@@ -17,5 +17,5 @@ app.use(cors({
 app.use('/auth',require("./router/authroute"));
 app.use('/products',require("./router/productRouter"));
 app.listen(Port,()=>{
-    console.log("hiiiiiii");
+    console.log(`port is running on ${PORT}`);
 })

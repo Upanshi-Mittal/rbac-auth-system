@@ -1,5 +1,4 @@
 const express=require('express');
-console.log("Auth routes loaded");
 const router=express.Router();
 const { protect, allowRoles } = require("../Middlewares/auth");
 const {signvalidation,loginvalidation}=require("../Middlewares/validation");
