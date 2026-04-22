@@ -10,9 +10,9 @@ app.get('/pin',(req,res)=>{
 })
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({ 
-    origin: "https://rbac-auth-system-74cu.onrender.com",
-    credentials: true
+
+app.use(cors({
+  origin: "*"
 }));
 app.use('/auth',require("./router/authroute"));
 app.use('/products',require("./router/productRouter"));
