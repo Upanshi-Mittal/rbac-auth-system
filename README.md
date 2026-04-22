@@ -4,9 +4,9 @@ A full-stack web application with secure authentication, role-based access contr
 
 ---
 
-## 🚀 Features
+## Features
 
-### 🔐 Authentication & Security
+### Authentication & Security
 - User Signup & Login using JWT Authentication
 - Password hashing using bcrypt
 - Protected routes using middleware
@@ -15,12 +15,12 @@ A full-stack web application with secure authentication, role-based access contr
 - **Admin**: Can add & delete products
 - **User**: Can view products only
 
-### 📦 Product Management
+### Product Management
 - Create products (Admin only)
 - View all products
 - Delete products (Admin only)
 
-### 🌐 Frontend
+### Frontend
 - Built with React.js
 - Login & Signup UI
 - Protected dashboard
@@ -28,7 +28,7 @@ A full-stack web application with secure authentication, role-based access contr
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Backend:
 - Node.js
@@ -94,14 +94,14 @@ npm run dev
 
 ---
 
-## 🐳 Run with Docker
+## Run with Docker
 
 ```bash
 docker-compose up --build
 ```
 
 ---
-## 🔗 API Endpoints
+## API Endpoints
 
 ### Auth
 
@@ -110,7 +110,7 @@ POST /auth/login → Login user
 
 ---
 
-### 📦 Products
+### Products
 
 GET /products → User/Admin  
 POST /products → Admin  
@@ -118,7 +118,7 @@ DELETE /products/:id → Admin
 
 ---
 
-## 🔒 Security Features
+## Security Features
 
 - JWT-based authentication
 - Role-based authorization middleware
