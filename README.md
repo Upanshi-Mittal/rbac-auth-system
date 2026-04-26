@@ -46,18 +46,19 @@ A full-stack web application with secure authentication, role-based access contr
 
 ## Project Structure
 
+```bash
 backend/
- ├── Controllers/
- ├── Middlewares/
- ├── Models/
- ├── router/
- ├── index.js
+├── Controllers/
+├── Middlewares/
+├── Models/
+├── router/
+└── index.js
 
 frontend/
- ├── src/
- ├── components/
- ├── pages/
-
+├── src/
+├── components/
+└── pages/
+```
 ---
 
 ## Installation & Setup
