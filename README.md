@@ -64,8 +64,8 @@ frontend/
 
 ### Clone Repository
 
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git  
-cd YOUR_REPO  
+git clone https://github.com/Upanshi-Mittal/rbac-auth-system.git  
+cd rbac-auth-system
 
 ---
 
