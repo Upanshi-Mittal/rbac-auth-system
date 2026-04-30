@@ -21,7 +21,12 @@ const RefreshHandler = ({ setIsAuthenticated }) => {
       }
     } else {
       // If not logged in, send to login page
-      navigate("/login");
+      //navigate("/login");
+      setIsAuthenticated(false);
+      if (location.pathname === "/final") {
+        navigate("/login");
+      }
+
     }
   }, []);
 

@@ -5,14 +5,13 @@ import './page.css'
 function Home() {
     return (
         <div className="container" style={{height:"60vh"}}>
-            <h2>Home</h2>
+            <h1>Home</h1>
             
                 <Link to="/signup">
                     <button className="signup" style={{ color: "white" }}>
                         SignUp
                     </button>
                 </Link>
-            
             
                 <Link to="/login">
                     <button className="login" style={{ color: "white" }}>

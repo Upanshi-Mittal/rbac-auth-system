@@ -16,10 +16,9 @@ function App() {
     <div className="App">
       <RefreshHandler setIsAuthenticated={setIsAutthenticated} />
       <Routes>
-        
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/" element={<Home />} />
         <Route path="/final" element={<PrivateRoute element={<Final />} /> } />
       </Routes>
     </div>
